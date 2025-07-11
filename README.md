@@ -1,4 +1,4 @@
-![smolcourse image](./banner.png)
+![smolcourse image](./ldi_banner.png)
 
 # a smol course for KHU LDI Lab
 
@@ -19,6 +19,7 @@ This course provides a practical, hands-on approach to working with small langua
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/14Qq_BPmeQM3--1vAfPCgyFG21MovMLGSlaCUxRWmsro/edit?gid=0#gid=0)
 
+![smolcourse image](./banner.png)
 
 # a smol course (Original)
 
