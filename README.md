@@ -17,7 +17,7 @@ This course provides a practical, hands-on approach to working with small langua
 
 ## Leaderboard
 
-TBD
+[Google Sheet](https://docs.google.com/spreadsheets/d/14Qq_BPmeQM3--1vAfPCgyFG21MovMLGSlaCUxRWmsro/edit?gid=0#gid=0)
 
 
 # a smol course (Original)
