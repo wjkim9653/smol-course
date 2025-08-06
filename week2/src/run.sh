@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1                           # GPU 1개 요청 (필요 없으면 주석 처리)
 #SBATCH --cpus-per-gpu=8
 #SBATCH --mem-per-gpu=24G
-#SBATCH --nodelist=moana-y2,moana-y3,moana-y4,moana-y5  # 노드 특정 요청
+#SBATCH --nodelist=moana-y2  # 노드 특정 요청
 #SBATCH -p batch_ce_ugrad
 #SBATCH -t 1-0
 

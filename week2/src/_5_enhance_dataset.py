@@ -80,7 +80,7 @@ def step2_deduplicate(samples, model):
 # ✅ STEP 3: 난이도 추정 (sLLM을 이용한 정답 예측 성공 여부)
 def step3_estimate_difficulty(samples, model, tokenizer):
     annotated = []
-    for sample in tqdm(samples, desc="Estimating difficulty"):
+    for sample in tqdm(samples, desc="✅ Estimating Difficulty on Each Samples w/ Qwen3-4B..."):
         prompt = f"Q: {sample['question']}\n"
         for i, c in enumerate(sample["choices"]):
             prompt += f"{CHOICE_LETTERS[i]}. {c}\n"
@@ -107,18 +107,47 @@ def step4_filter_distractors(samples, model):
     for s in samples:
         correct = s["choices"][CHOICE_LETTERS.index(s["answer"])]
         good_distractors = 0
-        for i, c in enumerate(s["choices"]):
+        for i, c in enumerate(tqdm(s["choices"]), desc="🔍 Assessing Distractor Quality on Each Samples..."):
             if CHOICE_LETTERS[i] == s["answer"]:
                 continue
             sim = model.similarity(correct, c)  # 실제 정답의 임베딩 값과 오답에 해당하는 distractor의 임베딩 값 간의 유사도
-            if sim > 0.3:  # 정답과의 유사도가 높게 나오는 훌륭한 distractor인 경우
+            if sim > 0.5:  # 정답과의 유사도가 높게 나오는 훌륭한 distractor인 경우
                 good_distractors += 1
         if good_distractors >= 2:  # 최소 2개 distractor는 괜찮아야 통과
             filtered.append(s)  # 선지에 있는 오답 중 good distractor에 해당하는 것이 2개 미만인 경우는 필터링해 샘플에서 제외
     return filtered
 
 # ✅ STEP 5: 다양성 기반 샘플링 (MMR 방식으로 10,000개 선택)
-def step5_select_final(samples, model, k=10000):
+def step5_select_final(samples, model, k=10000, ratio_dict=None):
+    if ratio_dict is None:
+        ratio_dict={"easy": 0.4, "medium": 0.4, "hard": 0.2}
+
+    # 난이도별로 분할해 bucket에 담기
+    difficulty_buckets = {"easy": [], "medium": [], "hard": []}
+    for sample in samples:
+        diff = sample.get("difficulty", "medium")
+        if diff in difficulty_buckets:
+            difficulty_buckets[diff].append(sample)
+
+    # 난이도별 MMR 샘플링 수행
+    final_samples = []
+    for diff, ratio in ratio_dict.items():
+        print(f"난이도별 MMR 샘플링 중... {diff} 난이도 | 총 샘플수 비율: {ratio}")
+        sub_samples = difficulty_buckets[diff]
+        target_k = int(ratio * k)
+
+        if len(sub_samples) < target_k:
+            logging.error(f"not enough {diff} samples: requested #: {target_k}, available #: {len(sub_samples)}")
+            target_k = len(sub_samples)  # 모자라면 가능한 개수 전체 샘플링
+        
+        selected = mmr_sample(sub_samples, model, target_k)
+        final_samples.extend(selected)
+
+    # 최종 셔플
+    random.shuffle(final_samples)
+    return final_samples
+
+def mmr_sample(samples, model, k):
     embeddings = model.encode([s["question"] for s in samples], normalize_embeddings=True)
 
     selected = []
@@ -199,8 +228,8 @@ def main():
     data4 = step4_filter_distractors(data3, embed_model)
     save_jsonl(data4, os.path.join(args.intermediate_dir, "step4_distractor_filtered.jsonl"))
 
-    print("🔹 Step 5: Selecting final 10k with diversity...")
-    data5 = step5_select_final(data4, embed_model, k=10000)
+    print("🔹 Step 5: Selecting final 10k with diversity and difficulty balance...")
+    data5 = step5_select_final(data4, embed_model, k=10000, ratio_dict={"easy": 0.4, "medium": 0.4, "hard": 0.2})
     save_jsonl(data5, args.output)
 
     print(f"✅ Done! Final dataset saved to: {args.output}")
