@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 8, in <module>
+    from distilabel.models import TransformersLLM
+ModuleNotFoundError: No module named 'distilabel'
+Traceback (most recent call last):
+  File "/data/wjkim9653/repos/smol-course/week2/src/_3_evaluate_dataset.py", line 4, in <module>
+    from lexical_diversity import lex_div as ld
+ModuleNotFoundError: No module named 'lexical_diversity'
+Traceback (most recent call last):
+  File "/data/wjkim9653/repos/smol-course/week2/src/_4_parsing.py", line 5, in <module>
+    from datasets import Dataset, DatasetDict
+ModuleNotFoundError: No module named 'datasets'

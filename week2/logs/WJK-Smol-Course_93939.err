@@ -1,0 +1,56 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.20it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.28it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.60it/s]
+Device set to use cuda:0
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 100 examples [00:00, 10568.46 examples/s]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1492, in emit
+    self.enqueue(self.prepare(record))
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1450, in enqueue
+    self.queue.put_nowait(record)
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 138, in put_nowait
+    return self.put(obj, False)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 88, in put
+    raise ValueError(f"Queue {self!r} is closed")
+ValueError: Queue <multiprocessing.queues.Queue object at 0x7fbe7833e1d0> is closed
+Call stack:
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 84, in <module>
+    main(args.input, args.output, args.model)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 68, in main
+    logging.info(distiset)
+Message: Distiset({
+    default: DatasetDict({
+        train: Dataset({
+            features: ['context', 'instruction', 'qa_item', 'distilabel_metadata', 'model_name'],
+            num_rows: 100
+        })
+    })
+})
+Arguments: ()
+🗂️ Saving...:   0%|          | 0/100 [00:00<?, ?it/s]🗂️ Saving...: 100%|██████████| 100/100 [00:00<00:00, 9144.49it/s]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1492, in emit
+    self.enqueue(self.prepare(record))
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1450, in enqueue
+    self.queue.put_nowait(record)
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 138, in put_nowait
+    return self.put(obj, False)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 88, in put
+    raise ValueError(f"Queue {self!r} is closed")
+ValueError: Queue <multiprocessing.queues.Queue object at 0x7fbe7833e1d0> is closed
+Call stack:
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 84, in <module>
+    main(args.input, args.output, args.model)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 75, in main
+    logging.info(f"✅ 총 {len(examples)}개의 문제 생성 완료")
+Message: '✅ 총 100개의 문제 생성 완료'
+Arguments: ()
+[nltk_data] Downloading package punkt to /home/wjkim9653/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     /home/wjkim9653/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Reading: 0it [00:00, ?it/s]Reading: 100it [00:00, 8587.14it/s]
+Parsing: 0it [00:00, ?it/s]Parsing: 100it [00:00, 10914.71it/s]

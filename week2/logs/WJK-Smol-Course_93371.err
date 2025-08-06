@@ -1,0 +1,298 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.96s/it]
+Device set to use cuda:0
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py:26 in  │
+│ <module>                                                                     │
+│                                                                              │
+│   23                                                                         │
+│   24                                                                         │
+│   25 if __name__ == "__main__":                                              │
+│ ❱ 26 │   distiset = pipeline.run(use_cache=False)                            │
+│   27 │   print(distiset)                                                     │
+│   28 │   examples = distiset["default"]["train"].to_list()                   │
+│   29 │   with open("../data/mmlu_generated_qa.jsonl", "w") as f:             │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │     data = LoadDataFromDicts(                                            │ │
+│ │            │   exclude_from_signature={                                  │ │
+│ │            │   │   'resources',                                          │ │
+│ │            │   │   'llm_jobs_ids',                                       │ │
+│ │            │   │   'llm_offline_batch_generation_block_until_done',      │ │
+│ │            │   │   'exclude_from_signature',                             │ │
+│ │            │   │   'disable_cuda_device_placement',                      │ │
+│ │            │   │   'type_info',                                          │ │
+│ │            │   │   'gpu_memory_utilization',                             │ │
+│ │            │   │   'input_batch_size'                                    │ │
+│ │            │   },                                                        │ │
+│ │            │   name='load_data_from_dicts_0',                            │ │
+│ │            │   resources=StepResources(                                  │ │
+│ │            │   │   replicas=1,                                           │ │
+│ │            │   │   cpus=None,                                            │ │
+│ │            │   │   gpus=None,                                            │ │
+│ │            │   │   memory=None,                                          │ │
+│ │            │   │   resources=None                                        │ │
+│ │            │   ),                                                        │ │
+│ │            │   input_mappings={},                                        │ │
+│ │            │   output_mappings={},                                       │ │
+│ │            │   use_cache=True,                                           │ │
+│ │            │   batch_size=50,                                            │ │
+│ │            │   data=[                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': 'Take Good Care of\nThis               │ │
+│ │            Textbook\nThis textbook is the property of your               │ │
+│ │            school.\nTa'+2920,                                            │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': 'ges.\n7. Repair any torn pages with   │ │
+│ │            paste or tape.\n8. Pack the book carefully whe'+2920,         │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': '(B.Sc.)\nSolomon Tekleyohannes        │ │
+│ │            (B.Sc.)\nTaye Hirpassa (B.Sc., M.A.)\nMerid Tessema '+2919,   │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': '...................... 21\nCheck List │ │
+│ │            ......................................... 3'+2920,            │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': '........................ 61\nUnit     │ │
+│ │            Summary .................................. 62\nR'+2919,       │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': 'Check List                            │ │
+│ │            ......................................... 92\nUnit Summary    │ │
+│ │            ...........'+2920,                                            │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': '... 102\n4.4 Energy Changes in        │ │
+│ │            Chemical Reactions  .. 108\n4.5 Types of Chemical R'+2920,    │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': 'sical States of\nMatter               │ │
+│ │            ........................ 163\n5.1 Introduction                │ │
+│ │            .........'+2920,                                              │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': '....................... 200\nUnit     │ │
+│ │            4\nUnit 5\n1\nUNIT\nStructure of the Atom\nUnit Outc'+2920,   │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   {                                                     │ │
+│ │            │   │   │   'context': 'n:\n–\ndetermining the number of      │ │
+│ │            protons, electrons, and neutrons of atoms from\nat'+2920,     │ │
+│ │            │   │   │   'instruction': 'Based on the above content,       │ │
+│ │            generate a high school-level multiple-choice chemist'+117     │ │
+│ │            │   │   },                                                    │ │
+│ │            │   │   ... +7794                                             │ │
+│ │            │   ]                                                         │ │
+│ │            )                                                             │ │
+│ │        f = <_io.TextIOWrapper name='../data/mmlu_prompt_input.jsonl'     │ │
+│ │            mode='r' encoding='UTF-8'>                                    │ │
+│ │     json = <module 'json' from                                           │ │
+│ │            '/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/j… │ │
+│ │      llm = TransformersLLM(                                              │ │
+│ │            │   cuda_devices='auto',                                      │ │
+│ │            │   disable_cuda_device_placement=False,                      │ │
+│ │            │   use_magpie_template=False,                                │ │
+│ │            │   magpie_pre_query_template=None,                           │ │
+│ │            │   generation_kwargs={},                                     │ │
+│ │            │   use_offline_batch_generation=False,                       │ │
+│ │            │   offline_batch_generation_block_until_done=None,           │ │
+│ │            │   jobs_ids=None,                                            │ │
+│ │            │   model='meta-llama/Llama-3.2-3B-Instruct',                 │ │
+│ │            │   revision='main',                                          │ │
+│ │            │   torch_dtype='auto',                                       │ │
+│ │            │   trust_remote_code=False,                                  │ │
+│ │            │   model_kwargs={'torch_dtype': 'float16'},                  │ │
+│ │            │   tokenizer=None,                                           │ │
+│ │            │   use_fast=True,                                            │ │
+│ │            │   chat_template=None,                                       │ │
+│ │            │   device=None,                                              │ │
+│ │            │   device_map=None,                                          │ │
+│ │            │   token=None,                                               │ │
+│ │            │   structured_output=None                                    │ │
+│ │            )                                                             │ │
+│ │       os = <module 'os' (frozen)>                                        │ │
+│ │ pipeline = <distilabel.pipeline.local.Pipeline object at 0x7f5ddbcf6e10> │ │
+│ │  prompts = [                                                             │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': 'Take Good Care of\nThis Textbook\nThis    │ │
+│ │            textbook is the property of your school.\nTa'+2920,           │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': 'ges.\n7. Repair any torn pages with paste │ │
+│ │            or tape.\n8. Pack the book carefully whe'+2920,               │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': '(B.Sc.)\nSolomon Tekleyohannes            │ │
+│ │            (B.Sc.)\nTaye Hirpassa (B.Sc., M.A.)\nMerid Tessema '+2919,   │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': '...................... 21\nCheck List     │ │
+│ │            ......................................... 3'+2920,            │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': '........................ 61\nUnit Summary │ │
+│ │            .................................. 62\nR'+2919,               │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': 'Check List                                │ │
+│ │            ......................................... 92\nUnit Summary    │ │
+│ │            ...........'+2920,                                            │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': '... 102\n4.4 Energy Changes in Chemical   │ │
+│ │            Reactions  .. 108\n4.5 Types of Chemical R'+2920,             │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': 'sical States of\nMatter                   │ │
+│ │            ........................ 163\n5.1 Introduction                │ │
+│ │            .........'+2920,                                              │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': '....................... 200\nUnit 4\nUnit │ │
+│ │            5\n1\nUNIT\nStructure of the Atom\nUnit Outc'+2920,           │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   {                                                         │ │
+│ │            │   │   'context': 'n:\n–\ndetermining the number of protons, │ │
+│ │            electrons, and neutrons of atoms from\nat'+2920,              │ │
+│ │            │   │   'instruction': 'Based on the above content, generate  │ │
+│ │            a high school-level multiple-choice chemist'+117              │ │
+│ │            │   },                                                        │ │
+│ │            │   ... +7794                                                 │ │
+│ │            ]                                                             │ │
+│ │   qa_gen = TextGeneration(                                               │ │
+│ │            │   exclude_from_signature={                                  │ │
+│ │            │   │   'resources',                                          │ │
+│ │            │   │   'llm_jobs_ids',                                       │ │
+│ │            │   │   'llm_offline_batch_generation_block_until_done',      │ │
+│ │            │   │   'exclude_from_signature',                             │ │
+│ │            │   │   'disable_cuda_device_placement',                      │ │
+│ │            │   │   'type_info',                                          │ │
+│ │            │   │   'gpu_memory_utilization',                             │ │
+│ │            │   │   'input_batch_size'                                    │ │
+│ │            │   },                                                        │ │
+│ │            │   name='text_generation_0',                                 │ │
+│ │            │   resources=StepResources(                                  │ │
+│ │            │   │   replicas=1,                                           │ │
+│ │            │   │   cpus=None,                                            │ │
+│ │            │   │   gpus=None,                                            │ │
+│ │            │   │   memory=None,                                          │ │
+│ │            │   │   resources=None                                        │ │
+│ │            │   ),                                                        │ │
+│ │            │   input_mappings={},                                        │ │
+│ │            │   output_mappings={'generation': 'qa_item'},                │ │
+│ │            │   use_cache=True,                                           │ │
+│ │            │   input_batch_size=50,                                      │ │
+│ │            │   llm=TransformersLLM(                                      │ │
+│ │            │   │   cuda_devices='auto',                                  │ │
+│ │            │   │   disable_cuda_device_placement=False,                  │ │
+│ │            │   │   use_magpie_template=False,                            │ │
+│ │            │   │   magpie_pre_query_template=None,                       │ │
+│ │            │   │   generation_kwargs={},                                 │ │
+│ │            │   │   use_offline_batch_generation=False,                   │ │
+│ │            │   │   offline_batch_generation_block_until_done=None,       │ │
+│ │            │   │   jobs_ids=None,                                        │ │
+│ │            │   │   model='meta-llama/Llama-3.2-3B-Instruct',             │ │
+│ │            │   │   revision='main',                                      │ │
+│ │            │   │   torch_dtype='auto',                                   │ │
+│ │            │   │   trust_remote_code=False,                              │ │
+│ │            │   │   model_kwargs={'torch_dtype': 'float16'},              │ │
+│ │            │   │   tokenizer=None,                                       │ │
+│ │            │   │   use_fast=True,                                        │ │
+│ │            │   │   chat_template=None,                                   │ │
+│ │            │   │   device=None,                                          │ │
+│ │            │   │   device_map=None,                                      │ │
+│ │            │   │   token=None,                                           │ │
+│ │            │   │   structured_output=None                                │ │
+│ │            │   ),                                                        │ │
+│ │            │   group_generations=False,                                  │ │
+│ │            │   add_raw_output=True,                                      │ │
+│ │            │   add_raw_input=True,                                       │ │
+│ │            │   num_generations=1,                                        │ │
+│ │            │   use_default_structured_output=False,                      │ │
+│ │            │   system_prompt=None,                                       │ │
+│ │            │   use_system_prompt=True,                                   │ │
+│ │            │   template='{{ instruction }}',                             │ │
+│ │            │   columns=['instruction']                                   │ │
+│ │            )                                                             │ │
+│ │   random = <module 'random' from                                         │ │
+│ │            '/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/r… │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+│                                                                              │
+│ /data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/site-packages/dist │
+│ ilabel/pipeline/local.py:253 in run                                          │
+│                                                                              │
+│   250 │   │   │   self._teardown()                                           │
+│   251 │   │   │                                                              │
+│   252 │   │   │   if self._exception:                                        │
+│ ❱ 253 │   │   │   │   raise self._exception                                  │
+│   254 │   │                                                                  │
+│   255 │   │   distiset = create_distiset(                                    │
+│   256 │   │   │   self._cache_location["data"],                              │
+│                                                                              │
+│ ╭───────────────────────────────── locals ─────────────────────────────────╮ │
+│ │             dataset = None                                               │ │
+│ │  dataset_batch_size = 50                                                 │ │
+│ │            distiset = None                                               │ │
+│ │         load_groups = None                                               │ │
+│ │    logging_handlers = None                                               │ │
+│ │             manager = <multiprocessing.managers.SyncManager object at    │ │
+│ │                       0x7f5ddabc2690>                                    │ │
+│ │       num_processes = 2                                                  │ │
+│ │          parameters = None                                               │ │
+│ │                pool = <distilabel.pipeline.local._NoDaemonPool           │ │
+│ │                       state=TERMINATE pool_size=2>                       │ │
+│ │                self = <distilabel.pipeline.local.Pipeline object at      │ │
+│ │                       0x7f5ddbcf6e10>                                    │ │
+│ │  storage_parameters = None                                               │ │
+│ │           use_cache = False                                              │ │
+│ │ use_fs_to_pass_data = False                                              │ │
+│ ╰──────────────────────────────────────────────────────────────────────────╯ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+RuntimeError: Failed to load all the steps. Could not run pipeline.
+Exception in thread Thread-1 (_monitor):
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+[nltk_data] Downloading package punkt to /home/wjkim9653/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     /home/wjkim9653/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt_tab.zip.
+Reading: 0it [00:00, ?it/s]Reading: 14it [00:00, 139.85it/s]Reading: 297it [00:00, 1716.96it/s]Reading: 579it [00:00, 2217.44it/s]Reading: 865it [00:00, 2467.82it/s]Reading: 1151it [00:00, 2608.09it/s]Reading: 1432it [00:00, 2675.01it/s]Reading: 1716it [00:00, 2726.45it/s]Reading: 1997it [00:00, 2749.83it/s]Reading: 2000it [00:00, 2489.66it/s]
+Parsing: 0it [00:00, ?it/s]Parsing: 1101it [00:00, 11005.68it/s]Parsing: 2000it [00:00, 11287.50it/s]

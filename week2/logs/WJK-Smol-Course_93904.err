@@ -1,0 +1,58 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:19,  6.58s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:10<00:10,  5.26s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:11<00:03,  3.23s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.98s/it]
+Device set to use cuda:0
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Downloading data:   0%|          | 0/155 [00:00<?, ?files/s]Downloading data: 100%|██████████| 155/155 [00:00<00:00, 33445.68files/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 2650 examples [00:00, 25308.37 examples/s]Generating train split: 5350 examples [00:00, 26008.87 examples/s]Generating train split: 7719 examples [00:00, 23444.34 examples/s]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1492, in emit
+    self.enqueue(self.prepare(record))
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1450, in enqueue
+    self.queue.put_nowait(record)
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 138, in put_nowait
+    return self.put(obj, False)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 88, in put
+    raise ValueError(f"Queue {self!r} is closed")
+ValueError: Queue <multiprocessing.queues.Queue object at 0x7fa372a861d0> is closed
+Call stack:
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 50, in <module>
+    main(args.input, args.output, args.model)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 34, in main
+    logging.info(distiset)
+Message: Distiset({
+    default: DatasetDict({
+        train: Dataset({
+            features: ['context', 'instruction', 'qa_item', 'distilabel_metadata', 'model_name'],
+            num_rows: 7719
+        })
+    })
+})
+Arguments: ()
+🗂️ Saving...:   0%|          | 0/7719 [00:00<?, ?it/s]🗂️ Saving...:  27%|██▋       | 2113/7719 [00:00<00:00, 21128.46it/s]🗂️ Saving...:  55%|█████▍    | 4232/7719 [00:00<00:00, 21163.01it/s]🗂️ Saving...:  82%|████████▏ | 6367/7719 [00:00<00:00, 21247.84it/s]🗂️ Saving...: 100%|██████████| 7719/7719 [00:00<00:00, 21208.91it/s]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1492, in emit
+    self.enqueue(self.prepare(record))
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1450, in enqueue
+    self.queue.put_nowait(record)
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 138, in put_nowait
+    return self.put(obj, False)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 88, in put
+    raise ValueError(f"Queue {self!r} is closed")
+ValueError: Queue <multiprocessing.queues.Queue object at 0x7fa372a861d0> is closed
+Call stack:
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 50, in <module>
+    main(args.input, args.output, args.model)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 41, in main
+    logging.info(f"✅ 총 {len(examples)}개의 문제 생성 완료")
+Message: '✅ 총 7719개의 문제 생성 완료'
+Arguments: ()
+[nltk_data] Downloading package punkt to /home/wjkim9653/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     /home/wjkim9653/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt_tab.zip.
+Reading: 0it [00:00, ?it/s]Reading: 3107it [00:00, 31063.88it/s]Reading: 6889it [00:00, 35036.10it/s]Reading: 7719it [00:00, 34719.69it/s]
+Parsing: 0it [00:00, ?it/s]Parsing: 4422it [00:00, 44214.67it/s]Parsing: 7719it [00:00, 44339.16it/s]

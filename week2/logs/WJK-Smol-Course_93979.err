@@ -1,0 +1,695 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.33it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.35it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.68it/s]
+Device set to use cuda:0
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Downloading data:   0%|          | 0/40 [00:00<?, ?files/s]Downloading data: 100%|██████████| 40/40 [00:00<00:00, 193732.29files/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 1450 examples [00:00, 13805.23 examples/s]Generating train split: 2000 examples [00:00, 10885.28 examples/s]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1492, in emit
+    self.enqueue(self.prepare(record))
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1450, in enqueue
+    self.queue.put_nowait(record)
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 138, in put_nowait
+    return self.put(obj, False)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 88, in put
+    raise ValueError(f"Queue {self!r} is closed")
+ValueError: Queue <multiprocessing.queues.Queue object at 0x7f96b0b44cd0> is closed
+Call stack:
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 95, in <module>
+    main(args.input, args.output, args.model, args.sample_cnt)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 76, in main
+    logging.info(distiset)
+Message: Distiset({
+    default: DatasetDict({
+        train: Dataset({
+            features: ['context', 'instruction', 'qa_item', 'distilabel_metadata', 'model_name'],
+            num_rows: 2000
+        })
+    })
+})
+Arguments: ()
+🗂️ Saving...:   0%|          | 0/2000 [00:00<?, ?it/s]🗂️ Saving...:  30%|██▉       | 591/2000 [00:00<00:00, 5903.63it/s]🗂️ Saving...:  59%|█████▉    | 1186/2000 [00:00<00:00, 5929.91it/s]🗂️ Saving...:  89%|████████▉ | 1787/2000 [00:00<00:00, 5963.95it/s]🗂️ Saving...: 100%|██████████| 2000/2000 [00:00<00:00, 5948.40it/s]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1492, in emit
+    self.enqueue(self.prepare(record))
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/logging/handlers.py", line 1450, in enqueue
+    self.queue.put_nowait(record)
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 138, in put_nowait
+    return self.put(obj, False)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/wjkim9653/anaconda3/envs/smol-course/lib/python3.11/multiprocessing/queues.py", line 88, in put
+    raise ValueError(f"Queue {self!r} is closed")
+ValueError: Queue <multiprocessing.queues.Queue object at 0x7f96b0b44cd0> is closed
+Call stack:
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 95, in <module>
+    main(args.input, args.output, args.model, args.sample_cnt)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_2_distilabel_pipeline.py", line 84, in main
+    logging.info(f"✅ 총 {len(examples)}개의 Context Chunk에 대해 QA Pairs 생성 성공")
+Message: '✅ 총 2000개의 Context Chunk에 대해 QA Pairs 생성 성공'
+Arguments: ()
+Parsing: 0it [00:00, ?it/s]Parsing: 19it [00:00, 185.34it/s]Parsing: 41it [00:00, 201.33it/s]Parsing: 62it [00:00, 201.17it/s]Parsing: 83it [00:00, 198.04it/s]Parsing: 103it [00:00, 189.17it/s]Parsing: 124it [00:00, 193.49it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 112
+
+ERROR:root:Content was:
+{
+        "question": "What is the half-life of a first-order reaction?",
+        "choices": [
+            "t_{1/2}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 2
+
+ERROR:root:Content was:
+{1/2}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 2
+
+ERROR:root:Content was:
+{1/2}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 2
+
+ERROR:root:Content was:
+{1/2}
+Parsing: 144it [00:00, 186.28it/s]Parsing: 163it [00:00, 175.77it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Unexpected character "," at position 292
+
+ERROR:root:Content was:
+{
+    "question": "What happens to cell potentials if a different reference were used instead of the standard hydrogen electrode?",
+    "choices": ["They become more negative.", "Their values remain unchanged.", "They become less negative.", "Their magnitudes increase but signs change."]
+  ],
+  {
+    "question": "How many electrons are transferred in the oxidation half-reaction 2I−(aq) → I2(s)?",
+    "choices": ["1 e−", "2 e−", "3 e−", "4 e−"],
+    "answer": "B"
+  }
+Parsing: 182it [00:00, 179.67it/s]Parsing: 201it [00:01, 180.64it/s]Parsing: 220it [00:01, 176.28it/s]Parsing: 239it [00:01, 177.26it/s]Parsing: 259it [00:01, 183.36it/s]Parsing: 279it [00:01, 186.77it/s]Parsing: 299it [00:01, 188.07it/s]Parsing: 319it [00:01, 190.66it/s]Parsing: 340it [00:01, 194.43it/s]Parsing: 360it [00:01, 185.39it/s]Parsing: 380it [00:02, 188.14it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 129
+
+ERROR:root:Content was:
+{"question": "What is the relationship between [H3O+] and [CH3COO-]?", 
+   "choices": "[H3O+] = [CH3COO-]", "[H3O+] = 2[CH3COO-]", "[H3O+] = [CH3COO-]^2", "[H3O+] = 1/[CH3COO-]"],
+   "answer": "A"}
+Parsing: 401it [00:02, 192.15it/s]Parsing: 421it [00:02, 187.57it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Object key expected at position 293
+
+ERROR:root:Content was:
+{
+  "question": "A sample of ethylene glycol has a mass of 34.8 g and liberates 783 J of heat. What is the change in temperature if the initial temperature is 22.1 °C?",
+  "choices": ["30.9 °C", "31.0 °C", "31.1 °C", "31.2 °C"],
+  "answer": "C" #Answer should be calculated as follows: ΔT = Q / mc, where Q = 783 J, m = 34.8 g, c = 2.42 J/g°C
+}
+Parsing: 442it [00:02, 192.36it/s]Parsing: 463it [00:02, 196.19it/s]Parsing: 483it [00:02, 191.34it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 152
+
+ERROR:root:Content was:
+{"question": "What is the typical range of electronegativity difference (∆EN) associated with polar covalent bonds?", 
+"choices": "[0.4–1.7]", "[0–0.4]", "[1.7–3.3]", "> 3.3"], 
+"answer": "B"}
+Parsing: 503it [00:02, 192.91it/s]Parsing: 525it [00:02, 198.14it/s]Parsing: 545it [00:02, 193.80it/s]Parsing: 565it [00:02, 187.41it/s]Parsing: 586it [00:03, 193.39it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Unexpected character "{" at position 68
+
+ERROR:root:Content was:
+{
+    "question": "To find the mass percent of carbon in sucrose (C_{12}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{22}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{11}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Unexpected character "{" at position 112
+
+ERROR:root:Content was:
+{
+    "question": "What type of chemical reaction occurs when concentrated sulfuric acid is added to sucrose (C_{12}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{22}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{11}
+Parsing: 606it [00:03, 182.71it/s]Parsing: 625it [00:03, 182.28it/s]Parsing: 645it [00:03, 186.51it/s]Parsing: 665it [00:03, 190.05it/s]Parsing: 687it [00:03, 197.71it/s]Parsing: 709it [00:03, 202.73it/s]Parsing: 730it [00:10,  9.92it/s] Parsing: 750it [00:10, 13.69it/s]Parsing: 772it [00:10, 19.37it/s]Parsing: 793it [00:10, 26.55it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Object key expected at position 249
+
+ERROR:root:Content was:
+{"question": "Can a book sit between shelves instead of on a shelf as shown?", 
+   "choices": ["Yes, it's perfectly fine.", "No, it's not stable.", "Maybe, depending on the size of the book.", "It depends on the weight of the book"],
+   "answer": "N/A" or "A" - This is actually not directly related to the context but let me replace with another question: 
+   {"question": "Why would a book's potential energy increase if it is moved from a higher shelf to a lower shelf?", 
+   "choices": ["Because it gains kinetic energy", "Because it loses mass", "Because it gains gravitational potential energy", "Because it changes color"],
+   "answer": "C"}
+Parsing: 815it [00:10, 36.38it/s]Parsing: 837it [00:11, 48.79it/s]Parsing: 857it [00:11, 61.87it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 116
+
+ERROR:root:Content was:
+{
+    "question": "What is the balanced equation for the complete combustion of pentane?",
+    "choices": ["C_5H_{12}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{12}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{12}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{12}
+Parsing: 877it [00:11, 77.02it/s]Parsing: 897it [00:11, 93.73it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Object key expected at position 112
+
+ERROR:root:Content was:
+{
+  "question": "What type of reaction occurs during the cracking of propane?",
+  istructural change
+  "choices": [
+    "Combustion",
+    "Decomposition",
+    "Synthesis",
+    "Structural change"
+  ],
+  "answer": "C"
+}
+Parsing: 917it [00:11, 108.49it/s]Parsing: 937it [00:11, 124.82it/s]Parsing: 957it [00:11, 135.38it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 123
+
+ERROR:root:Content was:
+{
+        "question": "Heptane has 7 carbon atoms. What is the chemical formula of heptane?",
+        "choices": ["C_6H_{14}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{16}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{18}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{20}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 111
+
+ERROR:root:Content was:
+{
+        "question": "Nonane has 9 carbon atoms. What is its chemical formula?",
+        "choices": ["C_8H_{18}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{20}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{10}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{22}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{11}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{24}
+Parsing: 976it [00:11, 141.79it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 130
+
+ERROR:root:Content was:
+{"question": "Draw the major product of the reaction (CH3)3CCH=CH2 + HBr ->?", 
+    "choices": "[CH3]3C(Br)CH2", "[CH3]3C(Br)=CH2", "CH3CH(Br)CH(Br)CH3", "CH3CH=CHCH(Br)2"],
+    "answer": "A"}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 119
+
+ERROR:root:Content was:
+{"question": "Draw the major product of the reaction (CH3)2C≡CH + HBr ->?", 
+    "choices": "[CH3]2C≡CH", "[CH3]2C≡CBR", "CH3CH(Br)C≡CH", "CH3CH≡CCH2BR"],
+    "answer": "B"}
+Parsing: 998it [00:11, 158.50it/s]Parsing: 1018it [00:12, 168.13it/s]Parsing: 1038it [00:12, 174.75it/s]Parsing: 1058it [00:12, 179.55it/s]Parsing: 1078it [00:12, 182.85it/s]Parsing: 1098it [00:12, 185.65it/s]Parsing: 1118it [00:12, 189.00it/s]Parsing: 1138it [00:12, 188.58it/s]Parsing: 1158it [00:12, 191.83it/s]Parsing: 1178it [00:12, 186.71it/s]Parsing: 1197it [00:12, 186.25it/s]Parsing: 1218it [00:13, 192.47it/s]Parsing: 1238it [00:13, 191.27it/s]Parsing: 1258it [00:13, 184.76it/s]Parsing: 1279it [00:13, 190.65it/s]Parsing: 1299it [00:13, 190.23it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 204
+
+ERROR:root:Content was:
+{
+  "question": "What is the ratio of cement to sand typically recommended for mixing?",
+  "choices": ["1:1", "2:1", "3:1", "No specific ratio is required"],
+  "answer": "None" # No information available
+}
+Parsing: 1320it [00:13, 193.56it/s]Parsing: 1340it [00:13, 193.15it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 416
+
+ERROR:root:Content was:
+{
+    "question": "Which of the following is NOT a step in balancing a half-reaction in an acidic solution?",
+    "choices": ["Balance the atoms", "Add water molecules to balance oxygen atoms", "Add hydrogen ions to balance the charges", "All of the above"],
+    "answer": "None of the above" #This would have been option 4 if none of the options were true. But since all options describe actual steps of the process, I rephrased it 
+  }
+Parsing: 1360it [00:13, 193.92it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Object key expected at position 35
+
+ERROR:root:Content was:
+{
+  "question": "If 4.5×10^(-4) mol/L of Fe(SCN)^{2+}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 248
+
+ERROR:root:Content was:
+{"question": "How much energy is released per gram of a 3.00 g sample of a new snack food in a calorimeter, assuming a 2.00 kg of surrounding water change in temperature from 25.0 °C to 75.0 °C?", "choices": "[Insert calculation]", "[Insert units]", "Unknown", "Cannot be calculated"}
+Parsing: 1381it [00:13, 196.02it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 212
+
+ERROR:root:Content was:
+{
+  "question": "Draw the structure corresponding to the IUPAC name '2,2-Dimethylbutane'",
+  "choices": [],
+  "answer": ""  # Provide the correct answer as a simple text representation of the molecular structure
+}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 278
+
+ERROR:root:Content was:
+{
+    "question": "How many grams of calcium chloride are needed to dissolve in 1650 mL of water if the concentration of the solution is 0.82 mol/L?",
+    "choices": ["106.92 g", "108.92 g", "110.92 g", "112.92 g"],
+    "answer": "None" (this question does not fit the context)
+}
+Parsing: 1401it [00:14, 193.28it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Unexpected character "{" at position 30
+
+ERROR:root:Content was:
+{
+  "question": "Butane (C_4H_{10}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{10}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{10}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{10}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{10}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{10}
+Parsing: 1421it [00:14, 187.10it/s]Parsing: 1440it [00:20,  9.50it/s] ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 187
+
+ERROR:root:Content was:
+{"question": "Which of the following has the same number of oxygen atoms as the sulfate ion?", 
+     "choices": ["nitrate ion (NO_3^-)", "chlorite ion (ClO_2^-)", "phosphate ion (PO_4^{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 165
+
+ERROR:root:Content was:
+{"question": "Which ion would have a similar shape to the sulfate ion?", 
+     "choices": ["nitrate ion (NO_3^-)", "chlorite ion (ClO_2^-)", "phosphate ion (PO_4^{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{2-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 163
+
+ERROR:root:Content was:
+{"question": "Which of the following has the same number of oxygen atoms as the nitrite ion?", 
+     "choices": ["chlorate ion (ClO_3^-)", "carbonate ion (CO_3^{2-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 165
+
+ERROR:root:Content was:
+{"question": "Which ion would have a similar shape to the nitrite ion?", 
+     "choices": ["nitrate ion (NO_3^-)", "chlorate ion (ClO_3^-)", "phosphate ion (PO_4^{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{2-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 136
+
+ERROR:root:Content was:
+{"question": "Which of the following has the same number of oxygen atoms as the chlorate ion?", 
+     "choices": ["nitrite ion (NO_2^ {-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{2-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 166
+
+ERROR:root:Content was:
+{"question": "Which ion would have a similar shape to the chlorate ion?", 
+     "choices": ["nitrate ion (NO_3^-)", "chlorite ion (ClO_2^-)", "phosphate ion (PO_4^{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{2-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 138
+
+ERROR:root:Content was:
+{"question": "Which of the following has the same number of oxygen atoms as the perchlorate ion?", 
+     "choices": ["nitrite ion (NO_2^{-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 2
+
+ERROR:root:Content was:
+{-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{2-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 116
+
+ERROR:root:Content was:
+{"question": "Which ion would have a similar shape to the perchlorate ion?", 
+     "choices": ["nitrate ion (NO_3^{-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 2
+
+ERROR:root:Content was:
+{-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{3-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{2-}
+Parsing: 1461it [00:20, 13.53it/s]Parsing: 1481it [00:21, 18.73it/s]Parsing: 1501it [00:21, 25.66it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Unexpected character "{" at position 31
+
+ERROR:root:Content was:
+{
+    "question": "If $6.02×10^{23}
+Parsing: 1522it [00:21, 35.21it/s]Parsing: 1541it [00:21, 45.80it/s]Parsing: 1560it [00:21, 58.63it/s]Parsing: 1580it [00:21, 74.64it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 196
+
+ERROR:root:Content was:
+{
+    "question": "What is the relationship between the concentrations of a reactant at two different times during a first-order reaction?",
+    "choices": "[A]_t = [A]_0 / 2", "[A]_t = 2 * [A]_0", "[A]_t = [A]_0 + kt", "[A]_t = [A]_0 * e^(-kt)",
+    "answer": "C"
+  }
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 164
+
+ERROR:root:Content was:
+{
+    "question": "Which equation represents the integrated rate law for a first-order reaction?",
+    "choices": "ln([A]_t / [A]_0) = kt", "ln([A]_0 / [A]_t) = kt", "kt = ln([A]_t / [A]_0)", "kt = [A]_t - [A]_0",
+    "answer": "A"
+  }
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 173
+
+ERROR:root:Content was:
+{
+    "question": "For a first-order reaction, what happens to the concentration of the reactant after one half-life?",
+    "choices": "[A]_t = 3/4[A]_0", "[A]_t = 1/2[A]_0", "[A]_t = 2[A]_0", "[A]_t = 3[A]_0",
+    "answer": "B"
+  }
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 154
+
+ERROR:root:Content was:
+{
+    "question": "What is the equation for calculating the half-life of a first-order reaction?",
+    "choices": "t_1/2 = k / 0.693", "t_1/2 = 0.693 / k", "t_1/2 = k * 0.693", "t_1/2 = 0.693 * k",
+    "answer": "B"
+  }
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 211
+
+ERROR:root:Content was:
+{
+    "question": "A certain reaction has a half-life of 20 minutes. What would be the time required for the reactant to decrease to 1/4 of its original concentration?",
+    "choices": "40 minutes", "80 minutes", "120 minutes", "160 minutes",
+    "answer": "B"
+  }
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 236
+
+ERROR:root:Content was:
+{
+    "question": "The decomposition of sulfuryl chloride (SO2Cl2) is a first-order reaction with a rate constant (k) of 2.2 × 10^-5 s^-1. What is the half-life of the reaction in hours?",
+    "choices": "3.16 × 10^4 h", "3.16 × 10^5 h", "3.17 × 10^4 h", "3.17 × 10^5 h",
+    "answer": "A"
+  }
+Parsing: 1601it [00:21, 93.03it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 174
+
+ERROR:root:Content was:
+{
+  "question": "Write two balanced half-reactions for the single displacement reaction between aqueous silver nitrate and metallic cadmium.",
+  "choices": [
+    "{Cd -> Cd^2+, e-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 4
+
+ERROR:root:Content was:
+{Ag^+ -> Ag}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 11
+
+ERROR:root:Content was:
+{Cd -> Cd^2+, 2e-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 4
+
+ERROR:root:Content was:
+{Ag^+ -> Ag}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 11
+
+ERROR:root:Content was:
+{Cd -> Cd^2+}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 4
+
+ERROR:root:Content was:
+{Ag^+ -> Ag}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 166
+
+ERROR:root:Content was:
+{
+  "question": "Write two balanced half-reactions for the single displacement reaction between gold and aqueous copper(II) sulfate.",
+  "choices": [
+    "{Au -> Au^3+, 3e-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 5
+
+ERROR:root:Content was:
+{Cu^2+ -> Cu}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 10
+
+ERROR:root:Content was:
+{Au -> Au^+, e-}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 5
+
+ERROR:root:Content was:
+{Cu^2+ -> Cu}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 11
+
+ERROR:root:Content was:
+{Au -> Au^0}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 5
+
+ERROR:root:Content was:
+{Cu^2+ -> Cu}
+Parsing: 1622it [00:21, 111.84it/s]Parsing: 1642it [00:21, 125.62it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 327
+
+ERROR:root:Content was:
+{
+    "question": "Which step involves adding hydroxide ions to both sides of the half-reaction to account for basic conditions?",
+    "choices": ["Step 3", "Step 4", "Step 5", "Step 6"],
+    "answer": "D" # corrected answer to match the problem statement (it's Step 4 in the sample problem, but not the general instruction)
+  }
+Parsing: 1662it [00:21, 140.21it/s]Parsing: 1683it [00:22, 155.70it/s]Parsing: 1703it [00:22, 159.70it/s]Parsing: 1724it [00:22, 171.14it/s]Parsing: 1745it [00:22, 179.27it/s]Parsing: 1765it [00:22, 177.68it/s]Parsing: 1784it [00:22, 180.82it/s]Parsing: 1804it [00:22, 185.77it/s]Parsing: 1824it [00:22, 188.11it/s]Parsing: 1844it [00:22, 188.71it/s]Parsing: 1865it [00:23, 192.16it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 227
+
+ERROR:root:Content was:
+{
+  "question": "How much NO is produced when 57.4 g of Cu reacts with 165 g of HNO3?",
+  "choices": [
+    "X grams",
+    "Y moles",
+    "Z liters",
+    "None of the above"
+  ],
+  "answer": "A" (Assuming X is the correct answer, but the exact value is not calculated here)
+}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 253
+
+ERROR:root:Content was:
+{
+  "question": "What is the mass of Fe produced when 11.5 g of Fe2O3 reacts with 2.63 x 10^24 molecules of CO?",
+  "choices": [
+    "X grams",
+    "Y moles",
+    "Z liters",
+    "None of the above"
+  ],
+  "answer": "A" (Assuming X is the correct answer, but the exact value is not calculated here)
+}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 239
+
+ERROR:root:Content was:
+{
+  "question": "What is the mass of CS2 produced when 17.5 g of carbon reacts with 225 g of SO2?",
+  "choices": [
+    "X grams",
+    "Y moles",
+    "Z liters",
+    "None of the above"
+  ],
+  "answer": "A" (Assuming X is the correct answer, but the exact value is not calculated here)
+}
+Parsing: 1885it [00:23, 191.39it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 89
+
+ERROR:root:Content was:
+{
+        "question": "What is the formula for paraffin wax?",
+        "choices": ["C_{24}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{50}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{25}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{52}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{20}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{40}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{30}
+ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 3
+
+ERROR:root:Content was:
+{60}
+Parsing: 1905it [00:23, 188.06it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 95
+
+ERROR:root:Content was:
+{
+        "question": "What is the suffix for an alkane in IUPAC nomenclature?",
+        "-ane",
+        choices: ["ene", "yne", "al", "ol"],
+        answer: "A"
+    }
+Parsing: 1925it [00:23, 188.59it/s]Parsing: 1945it [00:23, 191.75it/s]ERROR:root:❌ JSON parsing error: Error in file /data/wjkim9653/repos/smol-course/node_modules/jsonrepair/lib/cjs/utils/JSONRepairError.js, on line 9, column 5:
+Error: Colon expected at position 249
+
+ERROR:root:Content was:
+{
+    "question": "At what temperature is the solubility of potassium chlorate equal to 40 g/100 g of water?",
+    "choices": ["20°C", "30°C", "40°C", "50°C"],
+    "answer": "None" # This question cannot be accurately answered with the given data
+  }
+Parsing: 1965it [00:23, 180.32it/s]Parsing: 1986it [00:23, 186.58it/s]Parsing: 2000it [00:23, 84.17it/s] 
+[nltk_data] Downloading package punkt to /home/wjkim9653/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     /home/wjkim9653/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Reading: 0it [00:00, ?it/s]Reading: 473it [00:00, 4723.80it/s]Reading: 574it [00:00, 4757.64it/s]
+Traceback (most recent call last):
+  File "/data/wjkim9653/repos/smol-course/week2/src/_4_evaluate_dataset.py", line 65, in <module>
+    main(args.input)
+  File "/data/wjkim9653/repos/smol-course/week2/src/_4_evaluate_dataset.py", line 38, in main
+    output_text = " ".join(qa["choices"]) + " " + qa["answer"]
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: sequence item 0: expected str instance, int found

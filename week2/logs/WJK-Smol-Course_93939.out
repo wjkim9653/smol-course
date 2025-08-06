@@ -1,0 +1,2123 @@
+[08/04/25 02:51:44] INFO     ['distilabel.pipeline'] 📝 Pipeline    base.py:1015
+                             data will be written to                            
+                             '/home/wjkim9653/.cache/distilabel/pip             
+                             elines/pipeline_load_data_from_dicts_0             
+                             _text_generation_0/f17eb4190e69b0cc37a             
+                             e0202466817fe9867468e/executions/ba73d             
+                             233e45246d8bb75c175ffac3e3d452c194e/da             
+                             ta/steps_outputs'                                  
+                    INFO     ['distilabel.pipeline'] ⌛ The steps   base.py:1046
+                             of the pipeline will be loaded in                  
+                             stages:                                            
+                              * Legend: 🚰 GeneratorStep 🌐                     
+                             GlobalStep 🔄 Step                                 
+                              * Stage 0:                                        
+                                - 🚰 'load_data_from_dicts_0'                   
+                                - 🔄 'text_generation_0'                        
+[08/04/25 02:51:45] INFO     ['distilabel.pipeline'] ⏳ Waiting for base.py:1382
+                             all the steps of stage 0 to load...                
+[08/04/25 02:51:47] INFO     ['distilabel.pipeline'] ⏳ Steps from  base.py:1418
+                             stage 0 loaded: 1/2                                
+                              * 'load_data_from_dicts_0' replicas:              
+                             1/1                                                
+                              * 'text_generation_0' replicas: 0/1               
+[08/04/25 02:52:27] INFO     ['distilabel.pipeline'] ⏳ Steps from  base.py:1418
+                             stage 0 loaded: 2/2                                
+                              * 'load_data_from_dicts_0' replicas:              
+                             1/1                                                
+                              * 'text_generation_0' replicas: 1/1               
+                    INFO     ['distilabel.pipeline'] ✅ All the     base.py:1422
+                             steps from stage 0 have been loaded!               
+                    INFO     ['distilabel.step.load_data_fro step_wrapper.py:179
+                             m_dicts_0'] 🚰 Starting                            
+                             yielding batches from generator                    
+                             step 'load_data_from_dicts_0'.                     
+                             Offset: 0                                          
+                    INFO     ['distilabel.step.load_data_fro step_wrapper.py:290
+                             m_dicts_0'] 📨 Step                                
+                             'load_data_from_dicts_0'                           
+                             sending batch 0 to output queue                    
+                    INFO     ['distilabel.step.text_generati step_wrapper.py:230
+                             on_0'] 📦 Processing batch 0 in                    
+                             'text_generation_0' (replica                       
+                             ID: 0)                                             
+[08/04/25 02:55:08] INFO     ['distilabel.step.text_generati step_wrapper.py:290
+                             on_0'] 📨 Step                                     
+                             'text_generation_0' sending                        
+                             batch 0 to output queue                            
+                    INFO     ['distilabel.step.load_data_fro step_wrapper.py:290
+                             m_dicts_0'] 📨 Step                                
+                             'load_data_from_dicts_0'                           
+                             sending batch 1 to output queue                    
+                    INFO     ['distilabel.step.load_data_fro step_wrapper.py:129
+                             m_dicts_0'] 🏁 Finished running                    
+                             step 'load_data_from_dicts_0'                      
+                             (replica ID: 0)                                    
+                    INFO     ['distilabel.step.text_generati step_wrapper.py:230
+                             on_0'] 📦 Processing batch 1 in                    
+                             'text_generation_0' (replica                       
+                             ID: 0)                                             
+[08/04/25 02:57:55] INFO     ['distilabel.step.text_generati step_wrapper.py:290
+                             on_0'] 📨 Step                                     
+                             'text_generation_0' sending                        
+                             batch 1 to output queue                            
+                    INFO     ['distilabel.step.text_generati step_wrapper.py:129
+                             on_0'] 🏁 Finished running step                    
+                             'text_generation_0' (replica                       
+                             ID: 0)                                             
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the best way to handle a chemistry textbook to prevent damage?",
+"choices": [
+],
+        "Write notes directly on the pages.",
+        "Handle the book roughly while passing it to another student.",
+        "Use a bookmark made from a torn page.",
+        "Use a piece of paper or cardboard as a bookmark."
+    ],
+    "answer": "Use a piece of paper or cardboard as a bookmark."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the primary purpose of pressing lightly along the bound edge when turning the pages of a new book?",
+"choices": [
+],
+        "To prevent the pages from tearing",
+        "To keep the cover in good condition",
+        "To make the book more compact",
+        "To increase the weight of the book"
+    ],
+    "answer": "To keep the cover in good condition"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the title of Chapter 1 in the given textbook?",
+"choices": [
+],
+    "answer": "Structure of the Atom"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What chapter discusses the advantages of periodic classification of elements?",
+"choices": [
+],
+        "Chapter 2.1 Introduction",
+        "Chapter 2.4 Advantages of Periodic Classification",
+        "Chapter 3.1 Chemical Bonding",
+        "Chapter 4.6 Stoichiometry"
+    ],
+    "answer": "Chapter 2.4 Advantages of Periodic Classification"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What type of bonding occurs when one or more electrons are transferred between atoms, resulting in the formation of ions with opposite charges?",
+"choices": [
+],
+        "Covalent Bonding",
+        "Ionic Bonding",
+        "Metallic Bonding",
+        "Hydrogen Bonding"
+    ],
+    "answer": "Ionic Bonding"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the main topic covered in Chapter 4 of the Chemistry Grade 9 textbook?",
+"choices": [
+],
+        "Atomic Structure",
+        "Chemical Bonding",
+        "Chemical Reaction and Stoichiometry",
+        "Physical States of Matter"
+    ],
+    "answer": "Chemical Reaction and Stoichiometry"
+}
+⚠️ Invalid or unparsable qa_item: Here's your first question:
+
+{
+    "question": "What is the main topic covered in Chapter 4 of the C
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the term used to describe the arrangement of electrons in an atom?",
+"choices": [
+],
+        "Atomic Mass",
+        "Electron Configuration",
+        "Isotopic Variation",
+        "Valency"
+    ],
+    "answer": "Electron Configuration"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the term used by Democritus to describe the tiny, indivisible particles that he believed made up all matter?",
+"choices": [
+],
+    "answer": "Atomos"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the term used to describe the smallest particle of an element that retains the properties of that element?",
+"choices": [
+],
+    "answer": "Atom"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who is often referred to as the 'father of modern atomic theory'?",
+"choices": [
+],
+        "Democritus",
+        "John Dalton",
+        "Rutherford",
+        "Thomson"
+    ],
+    "answer": "John Dalton"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who is often referred to as the 'father of modern atomic theory'?",
+"choices": [
+],
+    "answer": "John Dalton"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who among the following scientists did NOT believe in the concept of 'atomos'?",
+"choices": [
+],
+    "answer": "Aristotle"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who is often referred to as the 'father of modern atomic theory'?",
+"choices": [
+],
+    "answer": "John Dalton"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who is often referred to as the 'father of modern atomic theory'?",
+"choices": [
+],
+    "answer": "John Dalton"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the main idea behind Dalton's Atomic Theory?",
+"choices": [
+],
+        "Atoms are the building blocks of matter and cannot be divided further.",
+        "Elements are composed of tiny particles called molecules.",
+        "Chemical reactions involve the creation or destruction of atoms.",
+        "Compounds are formed when atoms of the same element combine."
+    ],
+    "answer": "Atoms are the building blocks of matter and cannot be divided further."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to Dalton's Atomic Theory, what is a characteristic of atoms of the same element?",
+"choices": [
+],
+        "They are always identical in mass and in all other properties.",
+        "They can be created or destroyed during chemical reactions.",
+        "They have different chemical properties.",
+        "They are never identical in mass."
+    ],
+    "answer": "They are identical in mass and in all other properties."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to Dalton's atomic theory, what is a characteristic of all atoms of a given element?",
+"choices": [
+],
+    "answer": "They are identical in mass and other properties."
+}
+⚠️ Invalid or unparsable qa_item: Here are four questions based on the provided context:
+
+**Question 1**
+{
+    "question": "According 
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to Dalton's Atomic Theory, what is true about atoms?",
+"choices": [
+],
+        "Atoms are the largest particles of all elements.",
+        "Atoms are the smallest particles of all elements that can take part in a chemical reaction.",
+        "Atoms are only divisible into other atoms.",
+        "Atoms are only composed of electrons."
+    ],
+    "answer": "Atoms are the smallest particles of all elements that can take part in a chemical reaction."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to the Modern Atomic Theory, what is true about atoms?",
+"choices": [
+],
+        "Atoms are the largest particles of all elements.",
+        "Atoms are divisible and can be subdivided into electrons, protons, and neutrons.",
+        "Atoms of the same element always have the same mass.",
+        "Atoms cannot participate in chemical reactions."
+    ],
+    "answer": "Atoms are divisible and can be subdivided into electrons, protons, and neutrons."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to J.J. Thomson's experiment, what did he conclude about the nature of cathode rays?",
+"choices": [
+],
+        "They are made up of positively charged particles.",
+        "They are made up of neutral particles.",
+        "They are made up of very small negatively charged particles.",
+        "They are made up of large positively charged particles."
+    ],
+    "answer": "They are made up of very small negatively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who discovered that cathode rays are made up of very small negatively charged particles?",
+"choices": [
+],
+    "answer": "J.J. Thomson"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What did J.J. Thomson conclude about the composition of cathode rays?",
+"choices": [
+],
+        "They are made up of positively charged particles.",
+        "They are made up of neutral particles.",
+        "They are made up of very small negatively charged particles.",
+        "They are made up of large positively charged particles."
+    ],
+    "answer": "They are made up of very small negatively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What conclusion did J.J. Thomson draw about the composition of cathode rays after observing their behavior in electric and magnetic fields?",
+"choices": [
+],
+        "They are composed of positively charged particles.",
+        "They are composed of neutral particles.",
+        "They are composed of very small negatively charged particles, which he named electrons.",
+        "They are composed of large positively charged particles."
+    ],
+    "answer": "They are composed of very small negatively charged particles, which he named electrons."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What did J.J. Thomson conclude about the nature of cathode rays after observing their behavior in electric and magnetic fields?",
+"choices": [
+],
+        "They are made up of positively charged particles.",
+        "They are made up of neutral particles.",
+        "They are made up of very small negatively charged particles.",
+        "They are made up of large positively charged particles."
+    ],
+    "answer": "They are made up of very small negatively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What property of cathode rays was demonstrated by placing a paddle wheel in their path?",
+"choices": [
+],
+        "They have a positive charge.",
+        "They can only travel in a straight line.",
+        "They are of particle nature and can move a paddle wheel.",
+        "They are affected by temperature changes."
+    ],
+    "answer": "They are of particle nature and can move a paddle wheel."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the primary function of the paddle wheel in a cathode ray tube?",
+"choices": [
+],
+        "To produce cathode rays",
+        "To deflect cathode rays towards the positive plate",
+        "To measure the charge-to-mass ratio of an electron",
+        "To move due to the force exerted by the cathode rays"
+    ],
+    "answer": "To move the wheel due to the force exerted by the cathode rays"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What did J.J. Thomson discover about the nature of cathode rays?",
+"choices": [
+],
+        "They are made up of positively charged particles.",
+        "They are made up of negatively charged particles.",
+        "They have no charge at all.",
+        "Their charge cannot be determined."
+    ],
+    "answer": "They are made up of negatively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What was the result of J.J. Thomson's experiment with cathode rays?",
+"choices": [
+],
+        "He discovered the existence of protons.",
+        "He determined the charge-to-mass ratio (e/m) of an electron.",
+        "He discovered the concept of radioactivity.",
+        "He measured the mass of a neutron."
+    ],
+    "answer": "He determined the charge-to-mass ratio (e/m) of an electron."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the approximate mass of an electron compared to the mass of a hydrogen atom?",
+"choices": [
+],
+    "answer": "11837 times smaller"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the approximate mass of an electron compared to the mass of a hydrogen atom?",
+"choices": [
+],
+    "answer": "1/11837"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is a characteristic of alpha particles?",
+"choices": [
+],
+        "They are negatively charged particles.",
+        "They are neutral particles that cannot be deflected by magnets.",
+        "They are positively charged particles that can be deflected by positively charged plates.",
+        "They are electrons emitted from the nucleus."
+    ],
+    "answer": "They are positively charged particles that can be deflected by positively charged plates."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is a characteristic of alpha (α) particles?",
+"choices": [
+],
+        "They are negatively charged particles.",
+        "They are uncharged particles.",
+        "They are positively charged particles.",
+        "They can be deflected by both positively and negatively charged plates."
+    ],
+    "answer": "They are positively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is a characteristic of alpha (α) particles?",
+"choices": [
+],
+    "answer": "They are positively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is true about beta (β) particles?",
+"choices": [
+],
+        "Beta particles are positively charged particles.",
+        "Beta particles are uncharged particles.",
+        "Beta particles are negatively charged particles.",
+        "Beta particles are made up of protons."
+    ],
+    "answer": "Beta particles are negatively charged particles."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What did Rutherford conclude about the size of the nucleus compared to the entire atom?",
+"choices": [
+],
+        "The nucleus is larger than the entire atom.",
+        "The nucleus is roughly half the size of the entire atom.",
+        "The nucleus is about 1/10,000 the size of the entire atom.",
+        "The nucleus is smaller than the electron."
+    ],
+    "answer": "The nucleus is about 1/10,000 the size of the entire atom."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What conclusion did Rutherford draw from his experiment where only a few alpha particles were deflected by a very large angle or deflected back?",
+"choices": [
+],
+        "Most of the space in an atom is empty.",
+        "The nucleus occupies most of the space in an atom.",
+        "The space occupied by the heavy-positive centre must be very small.",
+        "The nucleus is located outside the atom."
+    ],
+    "answer": "The space occupied by the heavy-positive centre must be very small."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What type of particles did James Chadwick identify in his experiment where he bombarded a thin foil of beryllium with α-particles?",
+"choices": [
+],
+        "Protons",
+        "Neutrons",
+        "Electrons",
+        "Alpha particles"
+    ],
+    "answer": "Neutrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Who discovered the existence of neutrons?",
+"choices": [
+],
+    "answer": "James Chadwick"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the primary charge of a proton?",
+"choices": [
+],
+    "answer": "Positive (+)"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the composition of the nucleus of an atom, except for the simplest type of hydrogen atom?",
+"choices": [
+],
+    "answer": "Protons and Neutrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the relationship between the atomic number and the number of protons in an atom?",
+"choices": [
+],
+        "The atomic number is always greater than the number of protons.",
+        "The atomic number is equal to the number of protons.",
+        "The atomic number is less than the number of protons.",
+        "There is no direct relationship between the atomic number and the number of protons."
+    ],
+    "answer": "The atomic number is equal to the number of protons."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to Dalton's atomic theory, what can be concluded about the masses of atoms of the same element?",
+"choices": [
+],
+        "They will always be the same.",
+        "They may vary depending on the location of the atom.",
+        "They may vary due to differences in the number of protons and neutrons.",
+        "There is no information available to determine the masses of atoms."
+    ],
+    "answer": "They will always be the same."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the term used to describe the total number of protons and neutrons found in the nucleus of an atom?",
+"choices": [
+],
+        "Atomic Number",
+        "Mass Number",
+        "Electron Number",
+        "Nuclear Charge"
+    ],
+    "answer": "Mass Number"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the relationship between the atomic number (Z) and the number of electrons in a neutral atom?",
+"choices": [
+],
+        "The atomic number is always greater than the number of electrons.",
+        "The atomic number is always less than the number of electrons.",
+        "The atomic number is equal to the number of electrons.",
+        "There is no direct relationship between the atomic number and the number of electrons."
+    ],
+    "answer": "The atomic number is equal to the number of electrons."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the relationship between the atomic number (Z), the number of protons (p+), and the number of electrons (e-) in a neutral atom?",
+"choices": [
+],
+        "Z = p+ - e-",
+        "Z = p+ + e-",
+        "Z = p+ or Z = e-",
+        "Z = p+ x e-"
+    ],
+    "answer": "Z = p+ or Z = e-"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What does the atomic number of an element represent?",
+"choices": [
+],
+        "The total number of protons and neutrons in the nucleus of an atom",
+        "The number of electrons in a neutral atom",
+        "The number of protons in the nucleus of an atom",
+        "The mass of an atom"
+    ],
+    "answer": "The number of protons in the nucleus of an atom"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What does the superscript number in the notation '24 12Mg' represent?",
+"choices": [
+],
+        "The number of protons in the atom",
+        "The number of neutrons in the atom",
+        "The mass number of the atom",
+        "The atomic number of the atom"
+    ],
+    "answer": "C. The mass number of the atom"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the main reason why all atoms of a chemical element have the same atomic number?",
+"choices": [
+],
+        "They have the same number of protons and neutrons.",
+        "They have different numbers of protons and neutrons.",
+        "They have the same number of protons but different numbers of neutrons.",
+        "They have different numbers of protons and electrons."
+    ],
+    "answer": "They have the same number of protons but different numbers of neutrons."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is true about isotopes?",
+"choices": [
+],
+        "They have the same atomic number and mass number.",
+        "They have the same atomic number but different mass numbers.",
+        "They have different atomic numbers and mass numbers.",
+        "They have different atomic numbers but the same mass numbers."
+    ],
+    "answer": "b"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the nuclear symbol for the isotope Carbon-12?",
+"choices": [
+],
+    "answer": "12C"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the relative atomic mass of a hydrogen-1 atom?",
+"choices": [
+],
+    "answer": "1.007 a.m.u."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the approximate atomic mass of the oxygen-16 isotope?",
+"choices": [
+],
+    "answer": "15.994 a.m.u."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the approximate atomic mass of a hydrogen-1 atom?",
+"choices": [
+],
+    "answer": "1.007 a.m.u."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the formula used to calculate the average atomic mass of an element?",
+"choices": [
+],
+        "(Relative atomic mass x Percentage abundance) / Total percentage",
+        "Relative atomic mass + Percentage abundance",
+        "Percentage abundance / Relative atomic mass",
+        "Relative atomic mass - Percentage abundance"
+    ],
+    "answer": "(Relative atomic mass x Percentage abundance) / Total percentage"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the formula used to calculate the average atomic mass of an element?",
+"choices": [
+],
+        "(Relative atomic mass x Percentage abundance) / 100",
+        "Relative atomic mass + Percentage abundance",
+        "Percentage abundance / Relative atomic mass",
+        "Relative atomic mass - Percentage abundance"
+    ],
+    "answer": "(Relative atomic mass x Percentage abundance) / 100"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the formula used to calculate the average atomic mass of an element?",
+"choices": [
+],
+        "(Relative atomic mass x Percentage abundance) / 100",
+        "Relative atomic mass + Percentage abundance",
+        "Percentage abundance - Relative atomic mass",
+        "Relative atomic mass - Percentage abundance"
+    ],
+    "answer": "(Relative atomic mass x Percentage abundance) / 100"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the average atomic mass of Boron (B), given its two isotopes with masses 10.0134 u and 11.0094 u and abundances of 19.7% and 80.3%, respectively?",
+"choices": [
+],
+        "9.99 u",
+        "10.81 u",
+        "10.83 u",
+        "11.01 u"
+    ],
+    "answer": "10.81 u"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the primary reason why Thomson's atomic model was later discarded?",
+"choices": [
+],
+        "It did not account for the existence of isotopes.",
+        "It failed to explain the nuclear forces holding the atom together.",
+        "It incorrectly placed electrons inside a positively charged sphere.",
+        "It could not accurately predict the atomic masses of elements."
+    ],
+    "answer": "It incorrectly placed electrons inside a positively charged sphere."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""Which scientist's atomic model described atoms as having a uniform positive charge with embedded negatively charged electrons?",
+"choices": [
+],
+        "Dalton",
+        "Thomson",
+        "Rutherford",
+        "Bohr"
+    ],
+    "answer": "Thomson"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What was the main reason why Thomson's model of the atom was discarded and replaced by Rutherford's model?",
+"choices": [
+],
+        "It had too many flaws in its design.",
+        "It did not account for the existence of protons.",
+        "Alpha particles passed through it undeflected, contradicting its predictions.",
+        "It was too complex to understand."
+    ],
+    "answer": "C. Alpha particles passed through it undeflected, contradicting its predictions."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What was incorrect about Thomson's model of the atom?",
+"choices": [
+],
+        "It had too many electrons.",
+        "It placed electrons inside a positively charged sphere.",
+        "It described the nucleus as having a uniform negative charge.",
+        "It failed to account for the existence of protons."
+    ],
+    "answer": "It placed electrons inside a positively charged sphere."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What was incorrect about Thomson's model of the atom?",
+"choices": [
+],
+        "It had too much empty space between the nucleus and the electrons.",
+        "It placed the electrons inside a positively charged sphere.",
+        "It described the nucleus as having a negative charge.",
+        "It stated that atoms have no subatomic particles."
+    ],
+    "answer": "It placed the electrons inside a positively charged sphere."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What was incorrect about Thomson's model of the atom?",
+"choices": [
+],
+        "It had too much empty space between the nucleus and electrons.",
+        "It had a small, dense, positively charged nucleus.",
+        "A uniform positive charge with embedded negatively charged electrons would interact with alpha particles in such a manner.",
+        "It did not have a nucleus."
+    ],
+    "answer": "C"
+}
+⚠️ Invalid or unparsable qa_item: Here is a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+   
+⚠️ Invalid or unparsable qa_item: Here is a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+   
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to the Bohr model of the atom, what happens when an electron moves between orbits?",
+"choices": [
+],
+        "It does not change its energy level.",
+        "It absorbs or emits a variable amount of energy.",
+        "It absorbs or emits a fixed amount of energy.",
+        "It changes its path."
+    ],
+    "answer": "It absorbs or emits a fixed amount of energy."
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to the Bohr model of the atom, what is the maximum number of electrons that the first energy level (n = 1) can hold?",
+"choices": [
+],
+        "2 protons",
+        "6 electrons",
+        "2 electrons",
+        "8 electrons"
+    ],
+    "answer": "3. 2 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to the Bohr model, what is the maximum number of electrons that the first energy level (n = 1) can accommodate?",
+"choices": [
+],
+    "answer": "2"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to Bohr's atomic model, what is the maximum number of electrons that the first energy level (n = 1) can accommodate?",
+"choices": [
+],
+    "answer": "2 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""According to the Bohr model, what is the maximum number of electrons that the fourth energy level (n = 4) can accommodate?",
+"choices": [
+],
+        "8 electrons",
+        "16 electrons",
+        "32 electrons",
+        "64 electrons"
+    ],
+    "answer": "32 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that the fourth energy level (n = 4) in the Bohr model of an atom can accommodate?",
+"choices": [
+],
+        "16 electrons",
+        "24 electrons",
+        "32 electrons",
+        "40 electrons"
+    ],
+    "answer": "32 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can occupy the outermost shell of an atom?",
+"choices": [
+],
+        "6 electrons",
+        "8 electrons",
+        "10 electrons",
+        "12 electrons"
+    ],
+    "answer": "8 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can occupy the outermost shell of an atom?",
+"choices": [
+],
+        "Four electrons",
+        "Six electrons",
+        "Eight electrons",
+        "Ten electrons"
+    ],
+    "answer": "Three"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can be accommodated in an f-sublevel?",
+"choices": [
+],
+    "answer": "14"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can occupy a p-sublevel?",
+"choices": [
+],
+        "2 electrons",
+        "4 electrons",
+        "6 electrons",
+        "8 electrons"
+    ],
+    "answer": "6 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's your high school-level multiple-choice chemistry question:
+
+{
+    "question": "What is the ma
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can be accommodated in a d-sublevel?",
+"choices": [
+],
+        "2 electrons",
+        "6 electrons",
+        "10 electrons",
+        "12 electrons"
+    ],
+    "answer": "10 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can be accommodated in a p-sublevel?",
+"choices": [
+],
+        "2 electrons",
+        "4 electrons",
+        "6 electrons",
+        "8 electrons"
+    ],
+    "answer": "6 electrons"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "qu
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the maximum number of electrons that can occupy the d-sublevel?",
+"choices": [
+],
+    "answer": "5"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+❌ JSON parsing error: Expecting ',' delimiter: line 2 column 19 (char 20)
+Content was:
+{
+    "question":" ""What is the correct electron configuration for the element Boron (atomic number 5)?",
+"choices": [
+],
+        "1s2 2s2 2p0",
+        "1s2 2s2 2p1",
+        "1s2 2s1 2p2",
+        "1s2 2s2 2p3"
+    ],
+    "answer": "1s2 2s2 2p1"
+}
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    
+⚠️ Invalid or unparsable qa_item: Here's your high school-level multiple-choice chemistry question:
+
+{
+    "question": "According to t
+
+📊 Evaluation Results
+# Samples             : 0
+Avg Input Length     : 0.00 tokens
+Avg Output Length    : 0.00 tokens
+Lexical Diversity (MATTR): 0.0000
+Lexical Diversity (HD-D) : 0.0000
+Lexical Diversity (MTLD) : 0.0000
+🔍 JSONL 파싱 중...
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the best way to handle a chemistry textbook to prevent damage?",
+    "choices": [
+        "Write notes directly on the pages.",
+        "Handle the book roughly while passing it to a
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the primary purpose of pressing lightly along the bound edge when turning the pages of a new book?",
+    "choices": [
+        "To prevent the pages from tearing",
+        "To keep
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the title of Chapter 1 in the given textbook?",
+    "choices": ["Atomic Structure", "Chemical Bonding and Inter molecular Forces", "Periodic Classification of the Elements", "Stru
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What chapter discusses the advantages of periodic classification of elements?",
+    "choices": [
+        "Chapter 2.1 Introduction",
+        "Chapter 2.4 Advantages of Periodic Classifica
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What type of bonding occurs when one or more electrons are transferred between atoms, resulting in the formation of ions with opposite charges?",
+    "choices": [
+        "Covalent Bondin
+⚠️ Parse error: Unparsed QA item:
+Here's your first question:
+
+{
+    "question": "What is the main topic covered in Chapter 4 of the Chemistry Grade 9 textbook?",
+    "choices": [
+        "Atomic Structure",
+        "Chemical Bonding",
+        "Chemical Reaction and Stoichiometry",
+        "Physical States of Matter"
+    ],
+    "ans
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the term used to describe the arrangement of electrons in an atom?",
+    "choices": [
+        "Atomic Mass",
+        "Electron Configuration",
+        "Isotopic Variation",
+      
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the term used by Democritus to describe the tiny, indivisible particles that he believed made up all matter?",
+    "choices": ["Proton", "Electron", "Atomos", "Nucleus"],
+    "ans
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the term used to describe the smallest particle of an element that retains the properties of that element?",
+    "choices": ["Isotope", "Proton", "Electron", "Atom"],
+    "answer"
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who is often referred to as the 'father of modern atomic theory'?",
+    "choices": [
+        "Democritus",
+        "John Dalton",
+        "Rutherford",
+        "Thomson"
+    ],
+    "answe
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who is often referred to as the 'father of modern atomic theory'?",
+    "choices": ["Democritus", "John Dalton", "Aristotle", "Albert Einstein"],
+    "answer": "John Dalton"
+}
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the main difference between Democritus' and Aristotle's views on the compositio
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who among the following scientists did NOT believe in the concept of 'atomos'?",
+    "choices": ["Democritus", "John Dalton", "Aristotle", "Epicurus"],
+    "answer": "Aristotle"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who is often referred to as the 'father of modern atomic theory'?",
+    "choices": ["John Locke", "Aristotle", "John Dalton", "Isaac Newton"],
+    "answer": "John Dalton"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who is often referred to as the 'father of modern atomic theory'?",
+    "choices": ["John Ray", "Antoine Lavoisier", "John Dalton", "Robert Boyle"],
+    "answer": "John Dalton"
+}
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Dalton's Atomic Theory, what is the main characteristic of atoms of a give
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Dalton's Law of Definite Proportions, what can be concluded about the comp
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Dalton's atomic theory, what is the main idea behind the law of conservati
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the main idea behind Dalton's Atomic Theory?",
+    "choices": [
+        "Atoms are the building blocks of matter and cannot be divided further.",
+        "Elements are composed of
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the main idea behind the law of multiple proportions?",
+    "choices": [
+      
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Dalton's Atomic Theory, what is a characteristic of atoms of the same element?",
+    "choices": [
+        "They are always identical in mass and in all other properties.",
+  
+⚠️ Parse error: Unparsed QA item:
+Here are four questions based on the provided context:
+
+**Question 1**
+{
+    "question": "According to Dalton's atomic theory, what is a characteristic of all atoms of a given element?",
+    "choices": ["They are different in mass and other properties.", "They are identical in mass and other propert
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Dalton's Atomic Theory, what is true about atoms?",
+    "choices": [
+        "Atoms are the largest particles of all elements.",
+        "Atoms are the smallest particles of 
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to the Modern Atomic Theory, what is true about atoms?",
+    "choices": [
+        "Atoms are the largest particles of all elements.",
+        "Atoms are divisible and can be sub
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to J.J. Thomson's experiment, what did he conclude about the nature of cathode rays?",
+    "choices": [
+        "They are made up of positively charged particles.",
+        "The
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who discovered that cathode rays are made up of very small negatively charged particles?",
+    "choices": ["William Crookes", "J.J. Thomson", "John Dalton", "Albert Einstein"],
+    "answe
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What did J.J. Thomson conclude about the composition of cathode rays?",
+    "choices": [
+        "They are made up of positively charged particles.",
+        "They are made up of neutral par
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What conclusion did J.J. Thomson draw about the composition of cathode rays after observing their behavior in electric and magnetic fields?",
+    "choices": [
+        "They are composed of p
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What did J.J. Thomson conclude about the nature of cathode rays after observing their behavior in electric and magnetic fields?",
+    "choices": [
+        "They are made up of positively cha
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What property of cathode rays was demonstrated by placing a paddle wheel in their path?",
+    "choices": [
+        "They have a positive charge.",
+        "They can only travel in a straight
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the primary function of the paddle wheel in a cathode ray tube?",
+    "choices": [
+        "To produce cathode rays",
+        "To deflect cathode rays towards the positive plate",
+  
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What did J.J. Thomson discover about the nature of cathode rays?",
+    "choices": [
+        "They are made up of positively charged particles.",
+        "They are made up of negatively charg
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What was the result of J.J. Thomson's experiment with cathode rays?",
+    "choices": [
+        "He discovered the existence of protons.",
+        "He determined the charge-to-mass ratio (e/m
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the approximate mass of an electron compared to the mass of a hydrogen atom?",
+    "choices": ["1000 times smaller", "10000 times smaller", "11837 times smaller", "100000 times small
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the approximate mass of an electron compared to the mass of a hydrogen atom?",
+    "choices": ["1/1000", "1/10000", "1/11837", "1/100000"],
+    "answer": "1/11837"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is a characteristic of alpha particles?",
+    "choices": [
+        "They are negatively charged particles.",
+        "They are neutral particles that cannot be deflected by magnets."
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is a characteristic of alpha (α) particles?",
+    "choices": [
+        "They are negatively charged particles.",
+        "They are uncharged particles.",
+        "They are positively ch
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is a characteristic of alpha (α) particles?",
+    "choices": ["They are negatively charged particles.", "They are uncharged particles.", "They are positively charged particles.", "They 
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is true about beta (β) particles?",
+    "choices": [
+        "Beta particles are positively charged particles.",
+        "Beta particles are uncharged particles.",
+        "Beta particl
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What was the primary reason why Rutherford and his team were surprised by their results fr
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What was Rutherford's conclusion about the space occupied by the heavy positive center 
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What did Rutherford conclude about the size of the nucleus compared to the entire atom?",
+    "choices": [
+        "The nucleus is larger than the entire atom.",
+        "The nucleus is roug
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What conclusion did Rutherford draw from his experiment where only a few alpha particles were deflected by a very large angle or deflected back?",
+    "choices": [
+        "Most of the sp
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What would Rutherford have observed if he had bombarded copper metal instead of gold metal
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What type of particles did James Chadwick identify in his experiment where he bombarded a thin foil of beryllium with α-particles?",
+    "choices": [
+        "Protons",
+        "Neutrons"
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Who discovered the existence of neutrons?",
+    "choices": ["Ernest Rutherford", "James Chadwick", "Albert Einstein", "Marie Curie"],
+    "answer": "James Chadwick"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the primary charge of a proton?",
+    "choices": ["Positive (+)", "Negative (-)", "Neutral (0)", "Variable"],
+    "answer": "Positive (+)"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the composition of the nucleus of an atom, except for the simplest type of hydrogen atom?",
+    "choices": ["Protons only", "Neutrons only", "Protons and Neutrons", "Electrons"],
+
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the primary difference between the nucleus and the electron cloud of an atom?",
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the relationship between the atomic number and the number of protons in an atom?",
+    "choices": [
+        "The atomic number is always greater than the number of protons.",
+    
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Dalton's atomic theory, what can be concluded about the masses of atoms of the same element?",
+    "choices": [
+        "They will always be the same.",
+        "They may var
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the term used to describe the total number of protons and neutrons found in the nucleus of an atom?",
+    "choices": [
+        "Atomic Number",
+        "Mass Number",
+        "Ele
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the relationship between the atomic number (Z) and the number of electrons in a neutral atom?",
+    "choices": [
+        "The atomic number is always greater than the number of elect
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the relationship between the atomic number (Z), the number of protons (p+), and the number of electrons (e-) in a neutral atom?",
+    "choices": [
+        "Z = p+ - e-",
+        "Z =
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the relationship between the atomic number (Z) and the number of protons in an 
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What does the atomic number of an element represent?",
+    "choices": [
+        "The total number of protons and neutrons in the nucleus of an atom",
+        "The number of electrons in a
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the relationship between the mass number (A), atomic number (Z), and the number
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What does the superscript number in the notation '24 12Mg' represent?",
+    "choices": [
+        "The number of protons in the atom",
+        "The number of neutrons in the atom",
+       
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the difference between the number of neutrons in a sodium-23 atom and a sodium-
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the main reason why all atoms of a chemical element have the same atomic number?",
+    "choices": [
+        "They have the same number of protons and neutrons.",
+        "They hav
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is true about isotopes?",
+    "choices": [
+        "They have the same atomic number and mass number.",
+        "They have the same atomic number but different mass numbers.",
+      
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Which of the following statements about isotopes is true?",
+    "choices": [
+        "I
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the main difference between isotopes of an element?",
+    "choices": [
+        "Is
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the difference between isotopes of an element?",
+    "choices": [
+        "Isot
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the nuclear symbol for the isotope Carbon-12?",
+    "choices": ["12C", "12H", "12He", "12N"],
+    "answer": "12C"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the relative atomic mass of a hydrogen-1 atom?",
+    "choices": ["1 a.m.u.", "1.007 a.m.u.", "12 a.m.u.", "4/3 a.m.u."],
+    "answer": "1.007 a.m.u."
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the approximate atomic mass of the oxygen-16 isotope?",
+    "choices": ["15.5 a.m.u.", "15.994 a.m.u.", "16.5 a.m.u.", "17.5 a.m.u."],
+    "answer": "15.994 a.m.u."
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the approximate atomic mass of a hydrogen-1 atom?",
+    "choices": ["0.5 a.m.u.", "1 a.m.u.", "1.007 a.m.u.", "2 a.m.u."],
+    "answer": "1.007 a.m.u."
+}
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the main reason why the mass number and relative atomic mass of a given nucleus
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the average atomic mass of an element calculated by?",
+    "choices": [
+       
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the formula used to calculate the average atomic mass of an element?",
+    "choices": [
+        "(Relative atomic mass x Percentage abundance) / Total percentage",
+        "Relati
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the formula used to calculate the average atomic mass of an element?",
+    "choices": [
+        "(Relative atomic mass x Percentage abundance) / 100",
+        "Relative atomic mas
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the formula used to calculate the average atomic mass of an element?",
+    "choices": [
+        "(Relative atomic mass x Percentage abundance) / 100",
+        "Relative atomic mas
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the formula used to calculate the average atomic mass of an element with two is
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the average atomic mass of Boron (B), given its two isotopes with masses 10.0134 u and 11.0094 u and abundances of 19.7% and 80.3%, respectively?",
+    "choices": [
+        "9.99 u",
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the primary reason why Thomson's atomic model was later discarded?",
+    "choices": [
+        "It did not account for the existence of isotopes.",
+        "It failed to explain th
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "Which scientist's atomic model described atoms as having a uniform positive charge with embedded negatively charged electrons?",
+    "choices": [
+        "Dalton",
+        "Thomson",
+    
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What was the main reason why Thomson's model of the atom was discarded and replaced by Rutherford's model?",
+    "choices": [
+        "It had too many flaws in its design.",
+        "It d
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What was incorrect about Thomson's model of the atom?",
+    "choices": [
+        "It had too many electrons.",
+        "It placed electrons inside a positively charged sphere.",
+        "
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What was incorrect about Thomson's model of the atom?",
+    "choices": [
+        "It had too much empty space between the nucleus and the electrons.",
+        "It placed the electrons ins
+⚠️ Parse error: Unparsed QA item:
+Here is a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What was incorrect about Thomson's model of the atom?",
+    "choices": [
+        "It had too much empty space between the nucleus and electrons.",
+        "It had a small, dense, positiv
+⚠️ Parse error: Cannot extract main block from:
+Here is a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to the Rutherford model of the atom, what is the main difference between the
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to the Bohr model of the atom, what happens when an electron moves between orbits?",
+    "choices": [
+        "It does not change its energy level.",
+        "It absorbs or emit
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to the Bohr model of the atom, what is the maximum number of electrons that the first energy level (n = 1) can hold?",
+    "choices": [
+        "2 protons",
+        "6 electrons
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to the Bohr model, what is the maximum number of electrons that the first energy level (n = 1) can accommodate?",
+    "choices": ["2", "4", "6", "8"],
+    "answer": "2"
+}
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to Bohr's atomic model, what is the maximum number of electrons that the first energy level (n = 1) can accommodate?",
+    "choices": ["1 electron", "2 electrons", "4 electrons"
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "According to the Bohr model, what is the maximum number of electrons that the fourth energy level (n = 4) can accommodate?",
+    "choices": [
+        "8 electrons",
+        "16 electrons"
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the maximum number of electrons that the fourth energy level (n = 4) in the Bohr model of an atom can accommodate?",
+    "choices": [
+        "16 electrons",
+        "24 electrons
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the maximum number of electrons that can occupy the outermost shell of an atom?",
+    "choices": [
+        "6 electrons",
+        "8 electrons",
+        "10 electrons",
+        "1
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the maximum number of electrons that can occupy the outermost shell of an atom?",
+    "choices": [
+        "Four electrons",
+        "Six electrons",
+        "Eight electrons",
+  
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the maximum number of electrons that can be accommodated in an f-sublevel?",
+    "choices": ["2", "6", "10", "14"],
+    "answer": "14"
+}
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the primary difference between Rutherford's atomic model and Bohr's atomic mode
+⚠️ Parse error: Unparsed QA item:
+Here's your high school-level multiple-choice chemistry question:
+
+{
+    "question": "What is the maximum number of electrons that can occupy a p-sublevel?",
+    "choices": [
+        "2 electrons",
+        "4 electrons",
+        "6 electrons",
+        "8 electrons"
+    ],
+    "answer": "6 electrons"
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the maximum number of electrons that can be accommodated in a d-sublevel?",
+    "choices": [
+        "2 electrons",
+        "6 electrons",
+        "10 electrons",
+        "12 electro
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the given context:
+
+{
+    "question": "What is the maximum number of electrons that can be accommodated in a p-sublevel?",
+    "choices": [
+        "2 electrons",
+        "4 electrons",
+        "6 electrons",
+        "8 electrons
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the maximum number of electrons that can occupy the d-sublevel?",
+    "choices": ["2", "3", "5", "6"],
+    "answer": "5"
+}
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the ground-state electron configuration of Phosphorus (atomic number = 15)?",
+ 
+⚠️ Parse error: Unparsed QA item:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the correct electron configuration for the element Boron (atomic number 5)?",
+    "choices": [
+        "1s2 2s2 2p0",
+        "1s2 2s2 2p1",
+        "1s2 2s1 2p2",
+        "1s2 2s
+⚠️ Parse error: Cannot extract main block from:
+Here's a high school-level multiple-choice chemistry question based on the provided context:
+
+{
+    "question": "What is the mistake in the electron configuration i) 1s2 2s2 2p4 3s2?",
+    "choices": 
+⚠️ Parse error: Cannot extract main block from:
+Here's your high school-level multiple-choice chemistry question:
+
+{
+    "question": "According to the Aufbau principle, what happens when there are no more electrons left to fill the 3d sublevel?",
+ 
+[]
+변환된 MMLU Format Dataset 개수: 0
+📦 Datasets 포맷으로 변환 중...
