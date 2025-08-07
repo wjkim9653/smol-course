@@ -1,0 +1,4 @@
+  File "/data/wjkim9653/repos/smol-course/week2/src/_5_enhance_dataset.py", line 107
+    for s in tqdm(samples, desc="🔍 Assessing Distractor Quality on Each Samples...")):
+                                                                                    ^
+SyntaxError: unmatched ')'

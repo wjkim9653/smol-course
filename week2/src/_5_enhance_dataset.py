@@ -22,7 +22,7 @@ np.random.seed(SEED)
 
 CHOICE_LETTERS = ["A", "B", "C", "D"]
 
-# ✅ STEP 1: 선지 4개만 추려내고 정답 분포 균형화 (A~D 4000개씩 = 16,000)
+# ✅ STEP 1: 선지 4개만 추려내고 정답 분포 균형화 (A~D 4500개씩 = 18,000)
 def step1_filter_and_balance(input_data):
     buckets = defaultdict(list)  # 처음 키 지정할 때 값을 주지 않으면 해당 키에 대한 값을 빈 리스트로 초기화
 
@@ -45,12 +45,12 @@ def step1_filter_and_balance(input_data):
         sample["answer"] = CHOICE_LETTERS[new_answer_idx]  # 신규 인덱스로 정답 리매핑
         buckets[sample["answer"]].append(sample)  # bucket에 (신규 인덱스에 해당하는) 정답 선지(A,B,C,D 중) 키의 밸류 리스트에 샘플 추가
 
-    # 각 정답 문자별 4000개까지만 유지
+    # 각 정답 문자별 4500개까지만 유지
     balanced = []
     for letter in CHOICE_LETTERS:
         samples = buckets[letter]
         random.shuffle(samples)
-        balanced.extend(samples[:4000])  # 랜덤화한 각 선지(A,B,C,D) 별 4000개씩 담아 총 16000개 짜리 밸런스드 샘플 리스트 반환
+        balanced.extend(samples[:4500])  # 랜덤화한 각 선지(A,B,C,D) 별 4000개씩 담아 총 16000개 짜리 밸런스드 샘플 리스트 반환
     return balanced
 
 # ✅ STEP 2: 질문 중복 제거 (임베딩 + FAISS + 유사도 기준)
@@ -104,14 +104,14 @@ def step3_estimate_difficulty(samples, model, tokenizer):
 # ✅ STEP 4: distractor 품질 평가 (정답과 너무 떨어진 오답 제거)
 def step4_filter_distractors(samples, model):
     filtered = []
-    for s in samples:
+    for s in tqdm(samples, desc="🔍 Assessing Distractor Quality on Each Samples..."):
         correct = s["choices"][CHOICE_LETTERS.index(s["answer"])]
         good_distractors = 0
-        for i, c in enumerate(tqdm(s["choices"]), desc="🔍 Assessing Distractor Quality on Each Samples..."):
+        for i, c in enumerate(s["choices"]):
             if CHOICE_LETTERS[i] == s["answer"]:
                 continue
             sim = model.similarity(correct, c)  # 실제 정답의 임베딩 값과 오답에 해당하는 distractor의 임베딩 값 간의 유사도
-            if sim > 0.5:  # 정답과의 유사도가 높게 나오는 훌륭한 distractor인 경우
+            if sim > 0.6:  # 정답과의 유사도가 높게 나오는 훌륭한 distractor인 경우
                 good_distractors += 1
         if good_distractors >= 2:  # 최소 2개 distractor는 괜찮아야 통과
             filtered.append(s)  # 선지에 있는 오답 중 good distractor에 해당하는 것이 2개 미만인 경우는 필터링해 샘플에서 제외
@@ -159,6 +159,9 @@ def mmr_sample(samples, model, k):
     selected.append(ranked[0])  # 첫 질문은 가장 높은 relevance score 가진 샘플
     selected_set.add(ranked[0])
 
+    pbar = tqdm(total=k, desc="MMR Sampling...")
+    pbar.update(1)
+
     while len(selected) < k:  # k개 샘플까지 반복 샘플링
         mmr_scores = []
         for i in range(len(samples)):
@@ -172,6 +175,9 @@ def mmr_sample(samples, model, k):
         _, best = mmr_scores[0]  # 가장 높은 MMR 점수를 받은 샘플 1개를 선정해 selected에 추가
         selected.append(best)
         selected_set.add(best)
+        pbar.update(1)
+    
+    pbar.close()
 
     final = [samples[i] for i in selected]
     return final
