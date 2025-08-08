@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/data/wjkim9653/repos/smol-course/week2/src/_6_upload_to_hf.py", line 28, in <module>
+    main()
+  File "/data/wjkim9653/repos/smol-course/week2/src/_6_upload_to_hf.py", line 18, in main
+    data = load_jsonl(args.jsonl_dir)
+                      ^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'jsonl_dir'. Did you mean: 'jsonl_file'?

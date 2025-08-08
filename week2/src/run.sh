@@ -30,9 +30,20 @@
 # python _4_evaluate_dataset.py \
 #   --input ../data/pipeline_output_parsed_MMLU/mmlu_official_format_dataset_from_raw_pdf_paths_with_pypdf2_with_model_llama3_1_8B.jsonl
 
-python _5_enhance_dataset.py \
-  --input ../data/pipeline_output_parsed_MMLU/mmlu_official_format_dataset_from_raw_pdf_paths_with_pypdf2_with_model_llama3_1_8B.jsonl \
-  --intermediate_dir ../data/pipeline_output_filtered_MMLU/intermediate \
-  --output ../data/pipeline_output_filtered_MMLU/final_10k_filtered.jsonl
+# python _5_enhance_dataset.py \
+#   --input ../data/pipeline_output_parsed_MMLU/mmlu_official_format_dataset_from_raw_pdf_paths_with_pypdf2_with_model_llama3_1_8B.jsonl \
+#   --intermediate_dir ../data/pipeline_output_filtered_MMLU/intermediate \
+#   --output ../data/pipeline_output_filtered_MMLU/final_10k_filtered.jsonl
+
+# cp \
+#   ../data/pipeline_output_filtered_MMLU/final_10k_filtered.jsonl \
+#   ../data/final_MMLU/highschool_chemical_train_wonjin_10000_v1.jsonl
+
+# python _4_evaluate_dataset.py \
+#   --input ../data/final_MMLU/highschool_chemical_train_wonjin_10000_v1.jsonl
+
+python _6_upload_to_hf.py \
+  --jsonl_file ../data/final_MMLU/highschool_chemical_train_wonjin_10000_v1.jsonl \
+  --hf_dataset_name highschool_chemical_train_wonjin_10000_v1
 
 exit 0

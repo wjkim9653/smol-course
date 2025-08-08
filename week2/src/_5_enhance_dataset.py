@@ -22,7 +22,7 @@ np.random.seed(SEED)
 
 CHOICE_LETTERS = ["A", "B", "C", "D"]
 
-# ✅ STEP 1: 선지 4개만 추려내고 정답 분포 균형화 (A~D 4500개씩 = 18,000)
+# ✅ STEP 1: 선지 4개만 추려내고 정답 분포 균형화 (A~D 5000개씩 = 20,000)
 def step1_filter_and_balance(input_data):
     buckets = defaultdict(list)  # 처음 키 지정할 때 값을 주지 않으면 해당 키에 대한 값을 빈 리스트로 초기화
 
@@ -45,12 +45,12 @@ def step1_filter_and_balance(input_data):
         sample["answer"] = CHOICE_LETTERS[new_answer_idx]  # 신규 인덱스로 정답 리매핑
         buckets[sample["answer"]].append(sample)  # bucket에 (신규 인덱스에 해당하는) 정답 선지(A,B,C,D 중) 키의 밸류 리스트에 샘플 추가
 
-    # 각 정답 문자별 4500개까지만 유지
+    # 각 정답 문자별 5000개까지만 유지
     balanced = []
     for letter in CHOICE_LETTERS:
         samples = buckets[letter]
         random.shuffle(samples)
-        balanced.extend(samples[:4500])  # 랜덤화한 각 선지(A,B,C,D) 별 4000개씩 담아 총 16000개 짜리 밸런스드 샘플 리스트 반환
+        balanced.extend(samples[:5000])  # 랜덤화한 각 선지(A,B,C,D) 별 5000개씩 담아 총 20000개 짜리 밸런스드 샘플 리스트 반환
     return balanced
 
 # ✅ STEP 2: 질문 중복 제거 (임베딩 + FAISS + 유사도 기준)
@@ -120,7 +120,7 @@ def step4_filter_distractors(samples, model):
 # ✅ STEP 5: 다양성 기반 샘플링 (MMR 방식으로 10,000개 선택)
 def step5_select_final(samples, model, k=10000, ratio_dict=None):
     if ratio_dict is None:
-        ratio_dict={"easy": 0.4, "medium": 0.4, "hard": 0.2}
+        ratio_dict={"easy": 0.4, "medium": 0.45, "hard": 0.15}
 
     # 난이도별로 분할해 bucket에 담기
     difficulty_buckets = {"easy": [], "medium": [], "hard": []}
@@ -235,7 +235,7 @@ def main():
     save_jsonl(data4, os.path.join(args.intermediate_dir, "step4_distractor_filtered.jsonl"))
 
     print("🔹 Step 5: Selecting final 10k with diversity and difficulty balance...")
-    data5 = step5_select_final(data4, embed_model, k=10000, ratio_dict={"easy": 0.4, "medium": 0.4, "hard": 0.2})
+    data5 = step5_select_final(data4, embed_model, k=10000, ratio_dict={"easy": 0.4, "medium": 0.45, "hard": 0.15})
     save_jsonl(data5, args.output)
 
     print(f"✅ Done! Final dataset saved to: {args.output}")
