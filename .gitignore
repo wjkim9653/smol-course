@@ -1,2 +1,8 @@
-week2/data/ocr_pdf/
 .env
+
+week2/src/__pycache__/
+week2/data/ocr_pdf
+
+week3/model/
+week3/src/__pycache__/
+week3/src/wandb/

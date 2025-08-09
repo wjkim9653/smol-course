@@ -42,8 +42,8 @@
 # python _4_evaluate_dataset.py \
 #   --input ../data/final_MMLU/highschool_chemical_train_wonjin_10000_v1.jsonl
 
-python _6_upload_to_hf.py \
-  --jsonl_file ../data/final_MMLU/highschool_chemical_train_wonjin_10000_v1.jsonl \
-  --hf_dataset_name highschool_chemical_train_wonjin_10000_v1
+# python _6_upload_to_hf.py \
+#   --jsonl_file ../data/final_MMLU/highschool_chemical_train_wonjin_10000_v1.jsonl \
+#   --hf_dataset_name highschool_chemical_train_wonjin_10000_v1
 
 exit 0

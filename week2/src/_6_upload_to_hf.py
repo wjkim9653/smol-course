@@ -1,6 +1,6 @@
 import os
 import argparse
-from datasets import Dataset
+from datasets import Dataset, ClassLabel, Features, Sequence, Value
 from util import *
 from pathlib import Path
 import dotenv
@@ -24,7 +24,14 @@ def main():
     print("📂 Loading JSONL file")
     data = load_jsonl(args.jsonl_file)
     print("🔥 Converting JSONL -> HF Dataset")
-    dataset = Dataset.from_list(data)
+    answer_classes = ["A", "B", "C", "D"]
+    features = Features({
+          "question": Value("string"),
+          "choices": Sequence(Value("string")),
+          "answer": ClassLabel(names=answer_classes),
+          "difficulty": Value("string"),
+    })
+    dataset = Dataset.from_list(data, features=features)
 
     dataset_identifier = f"{HF_USERNAME}/{args.hf_dataset_name}"
     print(f"🚀 Uploading the Dataset to Huggingface as: {dataset_identifier}")

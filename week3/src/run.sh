@@ -16,9 +16,25 @@
 # 작업 디렉토리 이동
 # cd /data/wjkim9653/repos/smol-course/week3/src
 
+# HF에 Model Checkpoint 업로드
+# python upload_model_to_hf.py \
+#   --ckpt_dir ../model/SFT-SmolLM2-360M-Instruct-RUN-20250808-211417/checkpoint-3375 \
+#   --model_name SmolLM2-360M-CheMMLU-v2
+
+# 학습 진행
 python sft.py \
   --dataset_identifier wjkim9653/highschool_chemical_train_wonjin_10000_v1 \
   --base_model HuggingFaceTB/SmolLM2-360M-Instruct \
   --trained_model_dir ../model
+
+# 가장 최근 디렉토리 찾기
+latest_ckpt=$(ls -td ../model/SFT-SmolLM2-360M-Instruct-RUN-* | head -n 1)
+python evaluate.py \
+  --checkpoint_dir "$latest_ckpt"
+
+# HF에 Model Checkpoint 업로드
+# python upload_model_to_hf.py \
+#   --ckpt_dir ../model/SFT-SmolLM2-360M-Instruct-RUN-/checkpoint- \
+#   --model_name SmolLM2-360M-CheMMLU-
 
 exit 0
